@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const api = {
   key: '58969c8fe17ba4c24eda16108bf6a7f7',
@@ -9,23 +9,23 @@ function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
-  useEffect(() => {
-    if ("geolocation" in navigator) {
-      console.log("Available");
-      navigator.geolocation.getCurrentPosition(function(position) {
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
-        fetch(`${api.base}forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&APPID=${api.key}`)
-        .then(res =>res.json())
-        .then(result => {
-          setWeather(result);
-          setQuery('');
-        })
-      });
-    } else {
-      console.log("Not Available");
-    }
-  },[])
+  // useEffect(() => {
+  //   if ("geolocation" in navigator) {
+  //     console.log("Available");
+  //     navigator.geolocation.getCurrentPosition(function(position) {
+  //       console.log("Latitude is :", position.coords.latitude);
+  //       console.log("Longitude is :", position.coords.longitude);
+  //       fetch(`${api.base}forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&APPID=${api.key}`)
+  //       .then(res =>res.json())
+  //       .then(result => {
+  //         setWeather(result);
+  //         console.log('weather', weather.city)
+  //       });
+  //     });
+  //   } else {
+  //     console.log("Not Available");
+  //   }
+  // },[weather])
 
   const search = evt => {
     if (evt.key === 'Enter') {
@@ -49,7 +49,6 @@ function App() {
 
     return `${day} ${date} ${month} ${year}`;
   }
-
   return (
     <div className={(typeof weather.main != 'undefined') ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
@@ -63,7 +62,7 @@ function App() {
           onKeyPress={search}
           />
         </div>
-        {(typeof weather.main != 'undefined') ? (
+        {(typeof weather.main !== 'undefined') ? (
         <div>
           <div className='location-box'>
             <div className='location'>{weather.name}, {weather.sys.country}</div>
