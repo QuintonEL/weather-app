@@ -3,7 +3,7 @@
 
 ## Screenshots
 
- Background image changes dynamically based on temperature
+### Background image changes dynamically based on temperature
 ![cold](https://github.com/QuintonEL/weather-app/blob/master/docs/cold.png?raw=true)
 ![hot](https://github.com/QuintonEL/weather-app/blob/master/docs/hot.png?raw=true)
 
