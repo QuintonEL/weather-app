@@ -1,9 +1,9 @@
 # What's the weather like
-### Mobile weather app built using ReactJS and OpenWeather API.
+### Mobile weather app built using ReactJS and OpenWeather API. Deployed on [Netlify](https://what-is-the-weather-right-now.netlify.app/).
 
 ## Screenshots
 
-### Background image changes dynamically based on temperature
+ Background image changes dynamically based on temperature
 ![cold](https://github.com/QuintonEL/weather-app/blob/master/docs/cold.png?raw=true)
 ![hot](https://github.com/QuintonEL/weather-app/blob/master/docs/hot.png?raw=true)
 
