@@ -101,3 +101,16 @@ main {
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
+
+@media (min-width: 992px) {
+  .search-box {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    margin-top: 10rem;
+  }
+
+  .search-box .search-bar {
+    border-radius: 16px;
+  }
+}
