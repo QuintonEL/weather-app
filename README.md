@@ -1,3 +1,14 @@
+# What's the weather like
+### Mobile weather app built using ReactJS and OpenWeather API.
+
+## Screenshots
+
+### Background image changes dynamically based on temperature
+![cold](https://github.com/QuintonEL/weather-app/blob/master/docs/cold.png?raw=true)
+![hot](https://github.com/QuintonEL/weather-app/blob/master/docs/hot.png?raw=true)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
